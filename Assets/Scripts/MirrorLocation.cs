@@ -5,12 +5,12 @@ using UnityEngine;
 public class MirrorLocation : MonoBehaviour
 {
     [SerializeField] private Transform ConnectedMirrorTransform;
-    public Vector3 GetOtherMirrorPosition()
+    public Vector3 GetOtherMirrorPositionPlusForward()
     {
-     return ConnectedMirrorTransform.position;   
+     return ConnectedMirrorTransform.position + ConnectedMirrorTransform.forward;   
     }
     public Vector3 GetOtherMirrorLookDirection()
     {
-        return transform.forward;
+        return ConnectedMirrorTransform.forward;
     }
 }
